@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict";
+		let getallen = [];
+		// functie expressie
+		let controleAantal = (aantal) =>{
+			if (aantal == null){
+			document.write("U hebt geannulleerd!");
+		}
+		else if (aantal.length == 0){
+			document.write("U heeft niets ingegeven!");
+		}
+		else if (isNaN(aantal)){
+			document.write("Dit is geen correcte ingave");
+			return 0;
+		}
+		else {
+			return aantal;
+		}
+		}
+
+		let vulArray = (input) => {
+			let getal = prompt(`Geef getal nr ${input + 1} in.`);
+			getallen.push(controleGetal(getal));
+		}
+
+		let controleGetal = (invoer) =>{
+			if ((invoer == null) || (invoer.length == 0) || (isNaN(invoer))){
+				return "Fout";
+			}
+			else{
+				return invoer;
+			}
+		}
+		
+		let ingeven = prompt("Hoeveel getallen wil je ingeven");
+		ingeven = controleAantal(ingeven);
+		if (ingeven > 0){
+			for (let i=0; i < ingeven; i++){
+				vulArray(i);
+			}
+		}
+		document.write(getallen);		
+	</script>
+</body>
+</html>

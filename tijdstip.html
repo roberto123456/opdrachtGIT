@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let datumtijd = new Date();
+		let uur = datumtijd.getHours();
+		document.write(`<p>Het is nu ${uur} uur.</p>`);
+		if (uur <= 7){			
+			document.write(`<p>Goeienacht</p>`);
+		}
+		else if (uur <= 11){
+			document.write(`<p>Goeiemorgen</p>`);
+		}
+		else if (uur <= 18){
+			document.write(`<p>Goeiemiddag</p>`);
+		}
+		else {
+			document.write(`<p>Goeieavond</p>`);
+		}
+	</script>
+</body>
+</html>

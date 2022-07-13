@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function controle(inhoud){
+			if (inhoud == null){
+			document.write("U heeft geannulleerd!");
+			return false;
+		}
+		else if (inhoud.length == 0){
+			document.write("U heeft niets ingegeven!");
+			return false;
+		}
+		else if (inhoud.length < 2){
+			document.write("Geef meer dan 2 karakters in!");
+			return false;
+		}
+		else{
+			return (inhoud.charAt(0) .toUpperCase() + inhoud.substring(1));
+		}
+		}
+		let voornaam = prompt("Geef je voornaam","java");
+		let achternaam = "";
+		voornaam = controle(voornaam);
+		if (voornaam != false){	
+			achternaam = prompt("Geef je achternaam","script")		
+			achternaam = controle(achternaam);
+		}
+		if (achternaam != false){
+			document.write(`"Hey" ${voornaam} ${achternaam}`);
+		}
+	</script>
+
+</body>
+</html>
